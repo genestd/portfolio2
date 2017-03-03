@@ -32,18 +32,18 @@ export default class Home extends React.Component{
         </div>
         <div id="about">
           <div className="row clearfix">
+             <div className="col-2">
+              <h3>Web Developer</h3>
+              <p>I am a self-taught web-developer with a degree in Computer Science.
+                 This portfolio and the projects showcased were created as part of the FreeCodeCamp curriculum.
+              </p>
+            </div>
             <div className="col-2">
               <h3>Systems Analyst</h3>
-                <p>I am a systems analyst with over 20 years of experience in the financial services sector.
+                <p>I am also a systems analyst with over 20 years of experience in the financial services sector.
                    I have held every role in the development lifecycle, from analyst to developer to tester.
                    My daily work designing solutions for clients keeps me busy, but I have a passion for development.
                 </p>
-            </div>
-             <div className="col-2">
-              <h3>Web Developer</h3>
-              <p>I am also a self-taught web-developer with a degree in Computer Science.
-                 This portfolio and the projects showcased were created as part of the FreeCodeCamp curriculum.
-              </p>
             </div>
           </div>
         </div>
