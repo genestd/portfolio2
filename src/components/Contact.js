@@ -17,15 +17,15 @@ export default class Contact extends React.Component{
           <div className="container">
             <div>
               <div className="circle">
-                <i className="icon-paper-plane"></i>
-              </div>
-              <h2>Mail</h2>
-            </div>
-            <div>
-              <div className="circle">
                 <i className="icon-linkedin"></i>
               </div>
               <h2>Resume</h2>
+            </div>
+            <div>
+              <div className="circle">
+                <i className="icon-paper-plane"></i>
+              </div>
+              <h2>Mail</h2>
             </div>
             <div>
               <div className="circle">
