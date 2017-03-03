@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Router, Route, IndexRoute, browserHistory} from 'react-router'
+import {Router, Route, IndexRoute, hashHistory} from 'react-router'
 import injectTapEventPlugin from "react-tap-event-plugin";
 injectTapEventPlugin();
 
@@ -13,7 +13,7 @@ import Contact from './components/Contact';
 import './styles/main.scss';
 
 var routes = (
-  <Router history = {browserHistory}>
+  <Router history = {hashHistory}>
     <Route path = "/" component = {PortfolioDG} >
       <IndexRoute component = {Home} />
       <Route path = "home" component = {Home} />
