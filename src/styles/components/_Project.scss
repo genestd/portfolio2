@@ -42,7 +42,7 @@ h2{
 .col-23{
   width: 66%;
   float: left;
-  margin-left: 50px;
+  padding-left: 50px;
 }
 .col-2{
   width: 50%;
@@ -158,7 +158,6 @@ h2{
   .overlay .overlay-close{
     font-size: 48px;
     right: 0;
-
   }
   .overlay{
     top: $bp2MenuHeight;
