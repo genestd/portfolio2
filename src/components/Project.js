@@ -51,7 +51,16 @@ export default class Project extends React.Component{
 
   handleOverlay = (e) =>{
     var tempProjects = this.state.projects;
-    tempProjects[e.target.id].overlayState = tempProjects[e.target.id].overlayState === "" ? " open" : "";
+    var olState = tempProjects[e.target.id].overlayState
+    var noscroll = false
+    if (olState === ""){
+      tempProjects[e.target.id].overlayState = " open"
+      noscroll = true
+    } else {
+      tempProjects[e.target.id].overlayState = ""
+      noscroll= false
+    }
+    document.body.classList.toggle('noscroll', noscroll)
     this.setState({
       projects: tempProjects
     })
@@ -70,7 +79,7 @@ export default class Project extends React.Component{
 
   render(){
     return(
-      <div className="project">
+      <div className={"project"} >
         <h2>React / D3 / API</h2>
 
         <div className="grid grid-pad">
@@ -88,9 +97,6 @@ export default class Project extends React.Component{
                     <button ref="overlay1" className="overlay-close pointer" id={index} onClick={(e)=>this.handleOverlay(e)}><i className="icon-cancel" id={index}></i></button>
                     <h1>{project.title}</h1>
                     <div className="overlay-content">
-                      <div className="col-3 spacer">
-                        <a href={project.url} target="_blank"><img className="preview" src={project.mobilePreview} /></a>
-                      </div>
                       <div className="col-23 spacer">
                         <div className="stack">
                           {project.description}
@@ -107,6 +113,9 @@ export default class Project extends React.Component{
                         <div className="stack">
                           <b><a href={project.repo} target="_blank">Visit the github repo</a></b>
                         </div>
+                      </div>
+                      <div className="col-3 spacer">
+                        <a href={project.url} target="_blank"><img className="preview" src={project.mobilePreview} /></a>
                       </div>
                     </div>
                   </div>

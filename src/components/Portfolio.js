@@ -8,7 +8,7 @@ export default class Portfolio extends React.Component{
 
   render(){
     return(
-      <div className="portfolio" id="portfolio">
+      <div className={"portfolio"} id="portfolio">
         <div className="grid grid-pad">
           <h3 className="small title">Portfolio Principles</h3>
           <div className="fbox">

@@ -42,6 +42,7 @@ h2{
 .col-23{
   width: 66%;
   float: left;
+  margin-left: 50px;
 }
 .col-2{
   width: 50%;
@@ -72,6 +73,8 @@ h2{
     overflow: scroll;
   	top: $menuHeight;
   	left: 0;
+    right: 0;
+    bottom: 0;
   	background: $tertiaryColor;
 
     a, h1{
@@ -92,7 +95,7 @@ h2{
   height: 75px;
   position: absolute;
   right: 40px;
-  color: #880c30;
+  color: $textColor;
   background: transparent;
   outline: none;
   border: none;
@@ -129,23 +132,39 @@ h2{
   }
 }
 @media screen and (min-width: 400px) and (max-width: 500px){
+  .col-3{
+    width: 100%;
+    float: left;
+  }
+
+  .overlay .overlay-close{
+    right: 0;
+  }
   .overlay{
-    top: $bp2MenuHeight
+    top: $bp2MenuHeight;
   }
   .spacer{
     margin-top: 50px;
   }
 }
 @media screen and (max-width:399px){
+  .col-3{
+    width: 100%;
+    float: left;
+  }
   .spacer{
     margin-top: 30px;
   }
   .overlay .overlay-close{
     font-size: 48px;
+    right: 0;
+
   }
   .overlay{
+    top: $bp2MenuHeight;
     h1{
       font-size: 24px;
+      padding-right: 50px;;
     }
   }
 }
