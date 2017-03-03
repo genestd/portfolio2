@@ -15,7 +15,7 @@ module.exports={
   ],
   output: {
     path: __dirname + '/dist',
-    publicPath: 'https://github.com/genestd/portfolio',
+    //publicPath: 'https://github.com/genestd/portfolio',
     filename: "index_bundle.js"
   },
   devServer: {
