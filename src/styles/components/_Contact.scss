@@ -35,14 +35,14 @@
   min-height: 40%;
 }
 @media screen and (min-width: 501px) and (max-width: 650px){
-  .item{
+  .circle{
     width: 100px;
     height: 100px;
     margin: 30px;
   }
 }
 @media screen and (max-width: 500px){
-  .item{
+  .circle{
     width: 60px;
     height: 60px;
     margin: 15px;
