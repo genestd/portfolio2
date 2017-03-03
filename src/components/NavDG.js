@@ -45,7 +45,7 @@ export default class NavDG extends React.Component {
 
 const pages = [
   { id: 0, name: "Home", href:"home", icon: "icon-home", component: <Home/>},
-  { id: 1, name: "Portfolio", href:"portfolio", icon: "icon-code", component: <Portfolio/> },
+  { id: 1, name: "Portfolio", href:"myportfolio", icon: "icon-code", component: <Portfolio/> },
   { id: 2, name: "Contact", href:"contact", icon: "icon-users", component: <Contact />}
 ];
 /*               return( <li key={result.id}><a href={result.href} onClick={()=>this.props.menuFunc(i)}

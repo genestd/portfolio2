@@ -17,7 +17,7 @@ var routes = (
     <Route path = "/" component = {PortfolioDG} >
       <IndexRoute component = {Home} />
       <Route path = "home" component = {Home} />
-      <Route path = "portfolio" component = {Portfolio} />
+      <Route path = "myportfolio" component = {Portfolio} />
       <Route path = "contact" component = {Contact} />
     </Route>
   </Router>
