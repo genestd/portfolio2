@@ -1,0 +1,140 @@
+@import '../variables';
+
+*{
+  box-sizing: border-box;
+}
+.site-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+nav{
+    font-family: $mainFont;
+    font-size: $menuFontSize;
+    font-weight: bold;
+    height: $menuHeight;
+    width: 100%;
+    background-color: $secondaryColor;
+    top: 0;
+    left: 0;
+}
+
+ul{
+  height: $menuHeight;
+  padding: 0;
+  margin: 0 5%;
+  text-align: center;
+}
+
+li{
+  float: left;
+  display: inline-block;
+  width: 33.33%;
+}
+
+a{
+  color: $inactiveColor;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  line-height: 3;
+
+  &:hover, &:active{
+    color: $activeColor;
+    text-shadow: 0 0 4px $activeColor;
+  }
+
+}
+.highlight{
+  color: $activeColor;
+  box-shadow: inset 0 -2px 0 0 $activeColor;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+
+@media screen and (min-width: 501px) and (max-width: 650px){
+  nav, ul{
+    height: $bp1MenuHeight;
+  }
+  nav{
+    font-size: $bp1MenuFontSize;
+  }
+
+}
+@media screen and (min-width: 351px) and (max-width: 500px){
+  nav, ul{
+    height: $bp2MenuHeight;
+  }
+  nav{
+    font-size: $bp2MenuFontSize;
+  }
+}
+
+@media screen and (max-width: 350px){
+  nav, ul, li, a{
+    height: $bp2MenuHeight;
+  }
+  nav{
+    font-size: $bp2MenuFontSize;
+  }
+  i{
+    display: block;
+  }
+  li{
+    display: block;
+
+  }
+  a{
+    margin: auto;
+    line-height: normal;
+  }
+}
+
+/*@media screen and (max-width: 450px){
+  .site-menu{
+    width: 0;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: -150px;
+    background-color: $secondaryColor;
+    transition: left .5s;
+  }
+
+  nav{
+    margin-top: $menuHeight;
+    height: auto;
+    width: auto;
+  }
+
+  ul{
+    height: auto;
+  }
+
+  li{
+    display: block;
+    border-top: 1px solid $secondaryColor;
+  }
+
+  a{
+    color: $inactiveColor;
+    background-color: $secondaryColor;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    line-height: $mobileMenuHeight;
+  }
+}
+*/
