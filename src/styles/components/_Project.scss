@@ -82,7 +82,7 @@ h2{
     }
 
     h1{
-      margin: 0 0 0 50px;
+      margin: 0 0 80px 50px;
       padding: 20px 0 0 0 ;
     }
     a{
@@ -114,9 +114,6 @@ h2{
   transform: scale(1);
   transition: opacity 0.4s, visibility .2s, transform .2s;
 }
-.spacer{
-  margin-top: 100px;
-}
 .skill{
   float: left;
   background-color: $secondaryColor;
@@ -136,7 +133,9 @@ h2{
     width: 100%;
     float: left;
   }
-
+  .col-23{
+    width : 90%;
+  }
   .overlay .overlay-close{
     right: 0;
   }
@@ -152,8 +151,8 @@ h2{
     width: 100%;
     float: left;
   }
-  .spacer{
-    margin-top: 30px;
+  .col-23{
+    width : 90%;
   }
   .overlay .overlay-close{
     font-size: 48px;
@@ -163,7 +162,8 @@ h2{
     top: $bp2MenuHeight;
     h1{
       font-size: 24px;
-      padding-right: 50px;;
+      padding-right: 50px;
+      margin-bottom: 50px;
     }
   }
 }

@@ -15,24 +15,30 @@ export default class Contact extends React.Component{
     return(
         <div className="contact">
           <div className="container">
+            <a href="https://www.linkedin.com/in/davegenest/" target="_blank">
             <div>
-              <div className="circle">
+                <div className="circle">
                 <i className="icon-linkedin"></i>
               </div>
               <h2>Resume</h2>
             </div>
+            </a>
+            <a href="mailto:drwgenest@gmail.com">
             <div>
               <div className="circle">
                 <i className="icon-paper-plane"></i>
               </div>
               <h2>Mail</h2>
             </div>
+            </a>
+            <a href="https://twitter.com/intent/tweet?text=Sweet%20Portfolio&hashtags=portfolio&via=pdx_gen" target="_blank">
             <div>
               <div className="circle">
                 <i className="icon-twitter"></i>
               </div>
               <h2>Feedback</h2>
             </div>
+            </a>
           </div>
 
           <hr/>

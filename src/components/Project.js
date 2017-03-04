@@ -3,19 +3,19 @@ import '../styles/main.scss';
 
 const myProjects = [
   { id: "weather", type: "html", title: "Local Weather", preview: "icons/weather-preview.png",
-    url: "https://genestd.github.io/weather", repo:"https://github.com/genestd/weather", mobilePreview: "icons/weather-preview-phone.png",
+    url: "https://genestd.github.io/weather", repo:"https://github.com/genestd/weather", mobilePreview: "icons/weather-preview-phone2.png",
     description: "The goal of this project was to create a page to display the user's local weather.  If geolocation access is enabled by the browser, it looks up the user's location using the google maps API, otherwise it defaults to Alcatraz, CA. The coordinates are passed to the Dark Sky weather API and the resulting JSON object is parsed and displayed using jQuery. Weather icons were sourced from https://erikflowers.github.io/weather-icons/.",
     skills: ["HTML","CSS","Javascript","jQuery"],
     overlayState: ""
   },
   { id: "calculator", type: "html", title: "Javascript Calculator", preview: "icons/calc-preview.png"
-    , url: "https://genestd.github.io/calculator", repo: "https://github.com/genestd/calculator", mobilePreview: "icons/calc-preview-phone.png",
+    , url: "https://genestd.github.io/calculator", repo: "https://github.com/genestd/calculator", mobilePreview: "icons/calc-preview-phone2.png",
     description: "A calculator coded entirely in Javascript - no extra math libraries included.",
     skills: ["HTML","CSS","Javascript","jQuery"],
     overlayState: ""
   },
   { id: "simon", type: "html", title: "Simon Game", preview: "icons/simon-preview.png"
-    , url: "https://genestd.github.io/simon", repo: "https://github.com/genestd/simon", mobilePreview: "icons/simon-preview-phone.png",
+    , url: "https://genestd.github.io/simon", repo: "https://github.com/genestd/simon", mobilePreview: "icons/simon-preview-phone2.png",
     description: "The objective of this project was to replicate the game Simon.  I initially thought of making the board an SVG and animating the paths, but ultimately used plain CSS which was surprisingly simple. The buttons are animated using the velocity.js package.  Sounds are created through the HTML5 Web Audio API.  Get Simon to count to 20 to win the game!",
     skills: ["HTML","CSS","Javascript","jQuery", "velocity.js", "Web Audio API"],
     overlayState: ""
@@ -27,7 +27,7 @@ const myProjects = [
     overlayState: ""
   },
   { id: "dataviz", type: "react", title: "D3 Visualizations", preview: "icons/dataviz-preview.png"
-    , url: "https://genestd.github.io/dataviz", repo: "https://github.com/genestd/dataviz", mobilePreview: "icons/dataviz-preview-phone.png",
+    , url: "https://genestd.github.io/dataviz", repo: "https://github.com/genestd/dataviz", mobilePreview: "icons/dataviz-preview-phone2.png",
     description: "A carousel of D3 visualizations created for FreeCodeCamp's Data Visualization challenges. It contains a barchart, scatterplot, force-directed graph, Mercator projection map and a heatmap.  In addition to learning D3, I created an API to fetch data and learned about GEOJSON mapping data.  D3 was my favorite technology to learn and I am constantly amazed by its scope and ability.",
     skills: ["React","Redux","D3","API"],
     overlayState: ""
@@ -97,7 +97,7 @@ export default class Project extends React.Component{
                     <button ref="overlay1" className="overlay-close pointer" id={index} onClick={(e)=>this.handleOverlay(e)}><i className="icon-cancel" id={index}></i></button>
                     <h1>{project.title}</h1>
                     <div className="overlay-content">
-                      <div className="col-23 spacer">
+                      <div className="col-23">
                         <div className="stack">
                           {project.description}
                         </div>
@@ -114,7 +114,7 @@ export default class Project extends React.Component{
                           <b><a href={project.repo} target="_blank">Visit the github repo</a></b>
                         </div>
                       </div>
-                      <div className="col-3 spacer">
+                      <div className="col-3">
                         <a href={project.url} target="_blank"><img className="preview" src={project.mobilePreview} /></a>
                       </div>
                     </div>
@@ -143,10 +143,7 @@ export default class Project extends React.Component{
                     <button ref="overlay1" className="overlay-close pointer" id={index} onClick={(e)=>this.handleOverlay(e)}><i className="icon-cancel" id={index}></i></button>
                     <h1>{project.title}</h1>
                     <div className="overlay-content">
-                      <div className="col-3 spacer">
-                        <a href={project.url} target="_blank"><img className="preview" src={project.mobilePreview} /></a>
-                      </div>
-                      <div className="col-23 spacer">
+                      <div className="col-23">
                         <div className="stack">
                           {project.description}
                         </div>
@@ -162,6 +159,9 @@ export default class Project extends React.Component{
                         <div className="stack">
                           <b><a href={project.repo} target="_blank">Visit the github repo</a></b>
                         </div>
+                      </div>
+                      <div className="col-3">
+                        <a href={project.url} target="_blank"><img className="preview" src={project.mobilePreview} /></a>
                       </div>
                     </div>
                   </div>
