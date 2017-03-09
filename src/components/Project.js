@@ -33,7 +33,7 @@ const myProjects = [
     overlayState: ""
   },
   { id: "api", type: "react", title: "API Collection", preview: "icons/api-preview.png"
-    , url: "https://accidental-snowman.gomix.me/", repo: "https://gomix.com/#!/project/accidental-snowman", mobilePreview: "icons/api-preview-phone2.png",
+    , url: "https://dg.api.gomix.me/", repo: "https://gomix.com/#!/project/dg-api", mobilePreview: "icons/api-preview-phone2.png",
     description: "Initially created this project to make a proxy API request to the St. Louis Fed FRED API to fetch GDP data for D3. I added some other endpoints and landing pages to supplement the FreeCodeCamp API/Microservice challenges",
     skills: ["Node.js","express","Gomix","HTML","CSS"],
     overlayState: ""
