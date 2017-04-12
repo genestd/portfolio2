@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pontano+Sans">
   <link href="styles/entypo/css/entypo.css?family=entypo" rel="stylesheet">
+  <script type='text/javascript' src='js/map.js'></script>
   <style>
    .frontpage{
      background-image: url(icons/pattern4.svg);
@@ -52,12 +53,14 @@
 </body>
 <script type="text/javascript">
   function downloadJSAtOnload() {
-  var element = document.createElement("script");
-  element.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyB3pZMGgwpwUhZs313dMZ_L9u9ZfW3TBaU&callback=createMap";
-  document.body.appendChild(element);
-  var element2 = document.createElement("script");
-  element2.src = "js/index.js"
-  document.body.appendChild(element2)
+    var element2 = document.createElement("script");
+    element2.src = "js/index.js"
+    document.body.appendChild(element2)
+    var element = document.createElement("script");
+    element.async = true
+    element.defer = true
+    element.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyB3pZMGgwpwUhZs313dMZ_L9u9ZfW3TBaU&callback=createMap";
+    document.body.appendChild(element);
   }
   if (window.addEventListener)
     window.addEventListener("load", downloadJSAtOnload, false);
