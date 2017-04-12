@@ -124,8 +124,8 @@ api.addEventListener('mouseout', function(){
   cap.style.opacity=1;
   cap.style.zIndex=1;
 })
-projects.addEventListener('click', projectClick)
 
+projects.addEventListener('click', projectClick)
 function projectClick(event){
   if(modal){
     for( var i=0;i<overlays.length;i++){
@@ -134,8 +134,10 @@ function projectClick(event){
     modal=false
   } else {
     var el = document.getElementById( event.target.id + '-overlay')
-    el.classList.add('open')
-    modal=true
+    if( el ){
+      el.classList.add('open')
+      modal=true
+    }
   }
 }
 /* End of project events */
