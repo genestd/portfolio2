@@ -19,6 +19,7 @@ module.exports={
     filename: "index_bundle.js"
   },
   devServer: {
+    publicPath: '/',
     contentBase: __dirname + '/dist'
   },
   module: {
@@ -26,15 +27,16 @@ module.exports={
       { test: /\.(jpe?g|png|gif|svg)$/i, loader: 'file-loader' },
       { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"},
       { test: /\.css/, loader: ExtractTextPlugin.extract("css")},
-      { test: /\.scss$/, loaders: [ 'style', 'css?sourceMap', 'sass?sourceMap' ]}
+      { test: /\.scss$/, loaders: [ 'style', 'css?sourceMap', 'sass?sourceMap' ]},
     ]
   },
   plugins: [
     HTMLWebpackPluginConfig,
     new CopyWebpackPlugin([
             { from: './src/icons', to: 'icons' },
-            { from: './src/styles/entypo', to: 'styles/entypo'}
+            { from: './src/styles/entypo', to: 'styles/entypo'},
+            { from: './src/js/', to: 'js'}
         ]),
-    new ExtractTextPlugin("styles.css")
+    new ExtractTextPlugin("styles.css"),
   ]
 };

@@ -4,20 +4,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfolio D'Genest</title>
+  <title>Portfolio DGenest</title>
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pontano+Sans">
   <link href="styles/entypo/css/entypo.css?family=entypo" rel="stylesheet">
+  <style>
+   .frontpage{
+     background: url(icons/pattern4.svg) no-repeat fixed ;
+     background-size: 100% 100%;
+     background-position: top left;
+   }
+   #rogue{
+     background: url(/icons/roguelike_static.png) no-repeat;
+     background-size: 100%;
+   }
+   #dataviz{
+     background: url(/icons/dataviz_static.png) no-repeat;
+     background-size: 100%;
+   }
+   #gol{
+     background: url(/icons/gol.png) no-repeat;
+     background-size: 100%;
+   }
+   #nflviz{
+     background: url(/icons/nflviz_static.png) no-repeat;
+     background-size: 100%;
+   }
+   #weather{
+     background: url(/icons/weather_static.png) no-repeat;
+     background-size: 100%;
+   }
+   #api{
+     background: url(/icons/api_static.png) no-repeat;
+     background-size: 100%;
+   }
+   #simon{
+     background: url(/icons/simon_static.png) no-repeat;
+     background-size: 100%;
+   }
+  </style>
 </head>
 
-<body>
+<body id='body'>
   <div id="app" class="app"></div>
 </body>
 <script type="text/javascript">
   function downloadJSAtOnload() {
   var element = document.createElement("script");
-  element.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyB3pZMGgwpwUhZs313dMZ_L9u9ZfW3TBaU";
+  element.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyB3pZMGgwpwUhZs313dMZ_L9u9ZfW3TBaU&callback=createMap";
   document.body.appendChild(element);
+  var element2 = document.createElement("script");
+  element2.src = "js/index.js"
+  document.body.appendChild(element2)
   }
   if (window.addEventListener)
     window.addEventListener("load", downloadJSAtOnload, false);
