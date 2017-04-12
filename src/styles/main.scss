@@ -410,6 +410,9 @@ width: 100%;
   }
  }
  @media screen and (max-width:399px){
+   .frontpage{
+     background-attachment: scroll;
+   }
    .overlay{
      top: $bp2MenuHeight;
      h1{
