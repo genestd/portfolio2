@@ -1,5 +1,6 @@
 /* Refs to elements on my page */
 var home = document.getElementById('home')
+console.log(home)
 var flipper = document.getElementById('flipper')
 var port = document.getElementById('portfolio')
 var cont = document.getElementById('contact')
