@@ -286,7 +286,7 @@ export default class PortfolioDG extends React.Component{
                   <div className="skill">jQuery</div>
                 </div>
                 <div className='padded'>
-                  <b><a href='https://github.com/genestd/simon' target="_blank">Visit the glitch repo</a></b>
+                  <b><a href='https://github.com/genestd/simon' target="_blank">Visit the github repo</a></b>
                 </div>
               </div>
             </div>
