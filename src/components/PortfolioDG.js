@@ -51,17 +51,89 @@ export default class PortfolioDG extends React.Component{
             </div>
           </div>
         </section>
+
+
         <div className='projects' id='projects'>
-          <h1>
+          <h1 id='fullstack-gallery'>
             <div className='leftNav'>
               <span className='adjust'><i className='icon-up-open-big leftNav-icon' onClick={()=>scrollTo('home', 600)}></i></span>
+            </div>
+            Projects - Full Stack
+            <div className='rightNav'>
+              <span><i className='icon-down-open-big rightNav-icon' onClick={()=>scrollTo('react-gallery', 600)}></i></span>
+            </div>
+          </h1>
+          <section className='gallery' >
+              <div className='cell pointer' id="stockwatch">
+              <div className='caption' id='stockwatch-caption'>
+                <div className='aboutProj'>
+                  <h3>StockWatch - An Interactive Stock Tracker</h3>
+                  <h5>Full Stack - Foundation/D3 + Express/Websockets</h5>
+                </div>
+              </div>
+            </div>
+            <div className='overlay overlay-scale' id='stockwatch-overlay'>
+              <h1>Stockwatch</h1>
+                <div className="fcol">
+                <div className='padded'>
+                  An interactive stock tracking app built with D3 and Foundation 6 for a mobile-first design.  The client and server use web sockets to synch the data across multiple clients.
+                </div>
+                <div className='padded'>
+                  <b><a href='https://dg-stockwatch.glitch.me' target="_blank">Visit the live project page</a>&nbsp;&nbsp;</b>
+                </div>
+                <div className='padded clearfix'>
+                  <div className="skill">D3.js</div>
+                  <div className="skill">Foundation 6</div>
+                  <div className="skill">WebSockets</div>
+                  <div className="skill">Express</div>
+                  <div className="skill">CSS</div>
+                </div>
+                <div className='padded'>
+                  <b><a href='https://github.com/genestd/stockwatch' target="_blank">Visit the github repo</a></b>
+                </div>
+              </div>
+            </div>
+            <div className='cell pointer' id="bookshelf">
+            <div className='caption' id='bookshelf-caption'>
+              <div className='aboutProj'>
+                <h3>BookShelf - A book trading community</h3>
+                <h5>Full Stack - Foundation/React + Express/MongoDB</h5>
+              </div>
+            </div>
+          </div>
+          <div className='overlay overlay-scale' id='bookshelf-overlay'>
+            <h1>BookShelf</h1>
+              <div className="fcol">
+              <div className='padded'>
+                An interactive book trading app built with React and Foundation 6.  The back end is Express/MongoDB featuring Passport.js for local login.
+              </div>
+              <div className='padded'>
+                <b><a href='https://dg-stockwatch.glitch.me' target="_blank">Visit the live project page</a>&nbsp;&nbsp;</b>
+              </div>
+              <div className='padded clearfix'>
+                <div className="skill">D3.js</div>
+                <div className="skill">Foundation 6</div>
+                <div className="skill">WebSockets</div>
+                <div className="skill">Express</div>
+                <div className="skill">CSS</div>
+              </div>
+              <div className='padded'>
+                <b><a href='https://github.com/genestd/stockwatch' target="_blank">Visit the github repo</a></b>
+              </div>
+            </div>
+          </div>
+        </section>
+
+          <h1 id='react-gallery'>
+            <div className='leftNav'>
+              <span className='adjust'><i className='icon-up-open-big leftNav-icon' onClick={()=>scrollTo('fullstack-gallery', 600)}></i></span>
             </div>
             Projects - React and D3
             <div className='rightNav'>
               <span><i className='icon-down-open-big rightNav-icon' onClick={()=>scrollTo('html-gallery', 600)}></i></span>
             </div>
           </h1>
-          <section className='gallery' id='react-gallery'>
+          <section className='gallery'>
               <div className='cell pointer' id="rogue">
               <div className='caption' id='rogue-caption'>
                 <div className='aboutProj'>
@@ -190,7 +262,7 @@ export default class PortfolioDG extends React.Component{
           </section>
           <h1 id='html-gallery'>
             <div className='leftNav'>
-              <i className='icon-up-open-big leftNav-icon' onClick={()=>scrollTo('projects', 600)}></i>
+              <i className='icon-up-open-big leftNav-icon' onClick={()=>scrollTo('react-gallery', 600)}></i>
             </div>HTML/CSS and APIs<div className='rightNav'>
               <i className='icon-down-open-big rightNav-icon' onClick={()=>scrollTo('contact', 600)}></i>
             </div>
