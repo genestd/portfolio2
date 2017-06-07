@@ -8,6 +8,8 @@ var app = document.getElementById('app')
 var design = document.getElementById('design')
 var universal = document.getElementById('universal')
 var resp = document.getElementById('resp')
+var stockwatch = document.getElementById('stockwatch')
+var bookshelf = document.getElementById('bookshelf')
 var roguelike = document.getElementById('rogue')
 var dataviz = document.getElementById('dataviz')
 var gol = document.getElementById('gol')
@@ -33,7 +35,35 @@ function flip(event){
  * On Mouseout: reverse the hover changes
  * On Click: display the modal with project details
  */
-roguelike.addEventListener('mouseover', function(){
+ stockwatch.addEventListener('mouseover', function(){
+   if(!modal){
+     var cap = document.getElementById(this.id + '-caption')
+     cap.style.opacity=0;
+     cap.style.zIndex=-1;
+     this.setAttribute('style', 'background: url(icons/stockwatch.gif) no-repeat;background-size: 100%; cursor: pointer;')
+   }
+ })
+ stockwatch.addEventListener('mouseout', function(){
+   var cap = document.getElementById(this.id + '-caption')
+   cap.style.opacity=1;
+   cap.style.zIndex=1;
+   this.setAttribute('style', 'background: url(icons/stockwatch_static.png) no-repeat;background-size: 100%')
+ })
+ bookshelf.addEventListener('mouseover', function(){
+   if(!modal){
+     var cap = document.getElementById(this.id + '-caption')
+     cap.style.opacity=0;
+     cap.style.zIndex=-1;
+     this.setAttribute('style', 'background: url(icons/bookshelf.gif) no-repeat;background-size: 100%; cursor: pointer;')
+   }
+ })
+ bookshelf.addEventListener('mouseout', function(){
+   var cap = document.getElementById(this.id + '-caption')
+   cap.style.opacity=1;
+   cap.style.zIndex=1;
+   this.setAttribute('style', 'background: url(icons/bookshelf_static.png) no-repeat;background-size: 100%')
+ })
+ roguelike.addEventListener('mouseover', function(){
   if(!modal){
     var cap = document.getElementById(this.id + '-caption')
     cap.style.opacity=0;
