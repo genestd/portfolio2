@@ -191,9 +191,9 @@ function requestTick(){
   ticking=false
 }
 
-function getOffset(elem) {
-  el = elem.getBoundingClientRect();
-  console.log('getoffset', el, elem)
+function getOffset(el) {
+  el = el.getBoundingClientRect();
+  console.log(el)
   return {
     left: el.left + window.scrollX,
     top: el.top + window.scrollY
@@ -229,10 +229,10 @@ requestAnimationFrame(update)
 
 function scrollTo(to, duration) {
     console.log('scrolling to ', to)
-    var element = document.getElementById('body')
-    var dest = getOffset(document.getElementById(to)).top
+    element = document.getElementById('body')
+    to = getOffset(document.getElementById(to)).top
     var start = element.scrollTop,
-        change = dest - start,
+        change = to - start,
         increment = 20;
 
     var animateScroll = function(elapsedTime) {
