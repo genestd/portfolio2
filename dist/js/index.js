@@ -191,9 +191,9 @@ function requestTick(){
   ticking=false
 }
 
-function getOffset(el) {
-  el = el.getBoundingClientRect();
-  console.log(el)
+function getOffset(elem) {
+  el = elem.getBoundingClientRect();
+  console.log('getoffset', el, elem)
   return {
     left: el.left + window.scrollX,
     top: el.top + window.scrollY
