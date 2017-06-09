@@ -1,6 +1,5 @@
 /* Refs to elements on my page */
 var home = document.getElementById('home')
-console.log(home)
 var flipper = document.getElementById('flipper')
 var port = document.getElementById('portfolio')
 var cont = document.getElementById('contact')
@@ -191,12 +190,11 @@ function requestTick(){
   ticking=false
 }
 
-function getOffset(el) {
-  el = el.getBoundingClientRect();
-  console.log(el)
+function getOffset(elem) {
+  var el = elem.getBoundingClientRect();
   return {
-    left: el.left + window.scrollX,
-    top: el.top + window.scrollY
+    left: el.left + (window.scrollX || window.pageXOffset),
+    top: el.top + (window.scrollY || window.pageYOffset)
   }
 }
 
@@ -225,20 +223,23 @@ function update(){
 requestAnimationFrame(update)
 */
 
-
-
 function scrollTo(to, duration) {
-    console.log('scrolling to ', to)
-    element = document.getElementById('body')
-    to = getOffset(document.getElementById(to)).top
+
+    //var element = document.getElementById('body')
+    var element = (document.documentElement && document.documentElement.scrollTop) ? document.documentElement : document.body
+
+    var dest = getOffset(document.getElementById(to)).top
     var start = element.scrollTop,
-        change = to - start,
+        position = 0,
+        change = dest - start,
         increment = 20;
 
     var animateScroll = function(elapsedTime) {
+
         elapsedTime += increment;
-        var position = easeInOut(elapsedTime, start, change, duration);
+        position = easeInOut(elapsedTime, start, change, duration);
         element.scrollTop = position;
+
         if (elapsedTime < duration) {
             setTimeout(function() {
                 animateScroll(elapsedTime);
