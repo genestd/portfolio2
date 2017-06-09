@@ -229,10 +229,10 @@ requestAnimationFrame(update)
 
 function scrollTo(to, duration) {
     console.log('scrolling to ', to)
-    element = document.getElementById('body')
-    to = getOffset(document.getElementById(to)).top
+    var element = document.getElementById('body')
+    var dest = getOffset(document.getElementById(to)).top
     var start = element.scrollTop,
-        change = to - start,
+        change = dest - start,
         increment = 20;
 
     var animateScroll = function(elapsedTime) {
