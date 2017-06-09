@@ -193,6 +193,7 @@ function requestTick(){
 
 function getOffset(el) {
   el = el.getBoundingClientRect();
+  console.log(el)
   return {
     left: el.left + window.scrollX,
     top: el.top + window.scrollY
