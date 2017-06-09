@@ -186,7 +186,7 @@ function onScroll(){
 
 function requestTick(){
   if (!ticking){
-   requestAnimationFrame(update)
+   window.requestAnimationFrame(update)
   }
   ticking=false
 }
@@ -227,6 +227,7 @@ requestAnimationFrame(update)
 
 
 function scrollTo(to, duration) {
+    console.log('scrolling to ', to)
     element = document.getElementById('body')
     to = getOffset(document.getElementById(to)).top
     var start = element.scrollTop,

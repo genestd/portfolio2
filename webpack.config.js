@@ -27,7 +27,7 @@ module.exports={
       { test: /\.(jpe?g|png|gif|svg)$/i, loader: 'file-loader' },
       { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"},
       { test: /\.css/, loader: ExtractTextPlugin.extract("css")},
-      { test: /\.scss$/, loaders: [ 'style', 'css?sourceMap', 'sass?sourceMap' ]},
+      { test: /\.scss$/, loader: 'style-loader!css-loader!postcss-loader!sass-loader'},
     ]
   },
   plugins: [
