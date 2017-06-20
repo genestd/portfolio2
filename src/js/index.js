@@ -9,6 +9,7 @@ var universal = document.getElementById('universal')
 var resp = document.getElementById('resp')
 var stockwatch = document.getElementById('stockwatch')
 var bookshelf = document.getElementById('bookshelf')
+var fixation = document.getElementById('fixation')
 var roguelike = document.getElementById('rogue')
 var dataviz = document.getElementById('dataviz')
 var gol = document.getElementById('gol')
@@ -47,6 +48,20 @@ function flip(event){
    cap.style.opacity=1;
    cap.style.zIndex=1;
    this.setAttribute('style', 'background: url(icons/stockwatch_static.png) no-repeat;background-size: 100%')
+ })
+ fixation.addEventListener('mouseover', function(){
+   if(!modal){
+     var cap = document.getElementById(this.id + '-caption')
+     cap.style.opacity=0;
+     cap.style.zIndex=-1;
+     this.setAttribute('style', 'background: url(icons/fixation.gif) no-repeat;background-size: 100%; cursor: pointer;')
+   }
+ })
+ fixation.addEventListener('mouseout', function(){
+   var cap = document.getElementById(this.id + '-caption')
+   cap.style.opacity=1;
+   cap.style.zIndex=1;
+   this.setAttribute('style', 'background: url(icons/fixation_static.png) no-repeat;background-size: 100%')
  })
  bookshelf.addEventListener('mouseover', function(){
    if(!modal){

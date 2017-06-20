@@ -64,7 +64,36 @@ export default class PortfolioDG extends React.Component{
             </div>
           </h1>
           <section className='gallery' >
-              <div className='cell pointer' id="stockwatch">
+            <div className='cell pointer' id="fixation">
+            <div className='caption' id='fixation-caption'>
+              <div className='aboutProj'>
+                <h3>Fixation - A Pinterest Clone</h3>
+                <h5>Full Stack - Foundation 6 + Express/Passport/MongoDB</h5>
+              </div>
+            </div>
+          </div>
+          <div className='overlay overlay-scale' id='fixation-overlay'>
+            <h1>Stockwatch</h1>
+              <div className="fcol">
+              <div className='padded'>
+                A Pinterest clone built with Foundation 6 for a mobile-first design.  Social login on the client is done with Hello.js library; Authentication on the server is done with JWT.
+              </div>
+              <div className='padded'>
+                <b><a href='https://fixation.glitch.me' target="_blank">Visit the live project page</a>&nbsp;&nbsp;</b>
+              </div>
+              <div className='padded clearfix'>
+                <div className="skill">Foundation 6</div>
+                <div className="skill">Hello.js</div>
+                <div className="skill">Express</div>
+                <div className="skill">JWT</div>
+                <div className="skill">Passport</div>
+              </div>
+              <div className='padded'>
+                <b><a href='https://github.com/genestd/fixation' target="_blank">Visit the github repo</a></b>
+              </div>
+            </div>
+          </div>
+            <div className='cell pointer' id="stockwatch">
               <div className='caption' id='stockwatch-caption'>
                 <div className='aboutProj'>
                   <h3>StockWatch - An Interactive Stock Tracker</h3>
@@ -98,6 +127,15 @@ export default class PortfolioDG extends React.Component{
               <div className='aboutProj'>
                 <h3>BookShelf - A book trading community</h3>
                 <h5>Full Stack - Foundation/React + Express/MongoDB</h5>
+              </div>
+            </div>
+          </div>
+          <div className='cell' id="more">
+            <div className='caption' id='more-caption'>
+              <div className='aboutProj'>
+                <h3>See more projects!</h3>
+                <h5>Visit my github page</h5>
+                <h5><a href='https://github.com/genestd' target='_blank'><i className='icon-github bigIcon'></i></a></h5>
               </div>
             </div>
           </div>
