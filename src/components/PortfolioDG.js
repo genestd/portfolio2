@@ -73,7 +73,7 @@ export default class PortfolioDG extends React.Component{
             </div>
           </div>
           <div className='overlay overlay-scale' id='fixation-overlay'>
-            <h1>Stockwatch</h1>
+            <h1>Fixation</h1>
               <div className="fcol">
               <div className='padded'>
                 A Pinterest clone built with Foundation 6 for a mobile-first design.  Social login on the client is done with Hello.js library; Authentication on the server is done with JWT.
