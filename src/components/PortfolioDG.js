@@ -76,7 +76,7 @@ export default class PortfolioDG extends React.Component{
             <h1>Fixation</h1>
               <div className="fcol">
               <div className='padded'>
-                A Pinterest clone built with Foundation 6 for a mobile-first design.  Social login on the client is done with Hello.js library; Authentication on the server is done with JWT.
+                A Pinterest clone built with Foundation 6 for a mobile-first design.  Social login on the client is done with Hello.js library; Authentication on the server is done with JWT.  The Masonry layout was built with <a href="https://github.com/eiriklv/react-masonry-component" target="_blank">react-masonry-component</a>
               </div>
               <div className='padded'>
                 <b><a href='https://fixation.glitch.me' target="_blank">Visit the live project page</a>&nbsp;&nbsp;</b>
@@ -84,6 +84,7 @@ export default class PortfolioDG extends React.Component{
               <div className='padded clearfix'>
                 <div className="skill">Foundation 6</div>
                 <div className="skill">Hello.js</div>
+                <div className="skill">react-masonry-component</div>
                 <div className="skill">Express</div>
                 <div className="skill">JWT</div>
                 <div className="skill">Passport</div>
